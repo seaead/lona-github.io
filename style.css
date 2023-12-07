@@ -1,20 +1,20 @@
 /*GENERAL*/
 
 :root {
-    --primary-100:#d4eaf7;
-    --primary-200:#b6ccd8;
-    --primary-300:#3b3c3d;
-    --accent-100:#71c4ef;
-    --accent-200:#00668c;
-    --text-100:#1d1c1c;
-    --text-200:#313d44;
-    --bg-100:#fffefb;
-    --bg-200:#f5f4f1;
-    --bg-300:#cccbc8;
+    --primary-100:#0077C2;
+    --primary-200:#59a5f5;
+    --primary-300:#c8ffff;
+    --accent-100:#00BFFF;
+    --accent-200:#00619a;
+    --text-100:#333333;
+    --text-200:#5c5c5c;
+    --bg-100:#FFFFFF;
+    --bg-200:#f5f5f5;
+    --bg-300:#cccccc;
 }
 
 body {
-    margin: 0;
+    margin: 100px 0 0 0;
     padding: 0;
     font-family: 'Jost', sans-serif;
     background-color: var(--bg-100);
@@ -23,7 +23,7 @@ body {
 
 a, p {
     color: var(--text-200);
-    font-size: small;
+
     text-decoration: none;
 }
 
@@ -46,10 +46,10 @@ section {
 }
 
 .logo {
-    min-width: 60px;
-    min-height: 60px;
-    max-width: 150px;
-    max-height: 150px;
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 100px;
+    max-height: 100px;
 }
 
 .ellipsis {
@@ -62,18 +62,27 @@ section {
 button {
     font-family: 'Jost', sans-serif;
     font-weight: 500;
+    cursor: pointer;
 }
 
 /* HEADER*/
 
 header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    background-color: var(--bg-100);
+    top: 0;
+    z-index: 3;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.30);
 }
 
 header nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 90%;
 }
 
 header nav ul {
@@ -82,10 +91,12 @@ header nav ul {
     display: flex;
     flex-direction: row;
     gap: 30px;
+    align-items: center;
 }
 
 header nav ul li {
     display: list-item;
+
 }
 
 #menu {
@@ -113,46 +124,71 @@ header nav ul li {
     display: block;
 }
 
+.donation-btn {
+    border: none;
+    background-color: var(--primary-100);
+    color: var(--bg-100);
+    padding: 10px 20px;
+    border-radius: 2px;
+    transition: all 1000ms;
+}
+
+.donation-btn:hover,
+.donation-btn:focus-visible {
+    transform: translateY(-8px);
+    transition: all 250ms;
+    background-color:  var(--accent-200);
+}
+
 /*HERO*/
 
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.hero-label {
+.hero-image {
+    display: flex;
+    max-height: 600px;
+}
+
+.hero-text {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    position: relative;
+    align-self: flex-start;
+    width: 100%;
+}
+
+.hero-text h1 {
+    font-size: 80px;
+    max-width: 400px;
+}
+
+.hero-text aside {
     display: flex;
     flex-direction: column;
-    background-color: var(--primary-100);
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    min-width:20px;
-    left: -103px;
-    padding: 30px 50px;
-
+    max-width: 500px;
 }
 
-.hero-label h2 {
-    font-family: 'Pacifico', cursive;
-}
-
-.hero-label button {
+.hero-text button {
+    transition: outline-offset 250px ease;
+    outline: 2px solid var(--text-100);
     display: flex;
     background-color: inherit;
     border: none;
+    padding: 3px 5px;
     justify-content: center;
     align-items: center;
     gap: 5px;
 }
 
-.hero-image {
-    min-width: 300px;
-    min-height: 300px;
-    max-width: 700px;
-    max-height: 700px;
-
+.hero-text button:hover,
+.hero-text button:focus {
+    outline-offset: 2px;
 }
 
 /*SLIDER*/
@@ -229,10 +265,15 @@ header nav ul li {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 30px 44px 0px rgba(200, 200, 200, 0.25);
+    transition: all 1000ms;
 }
 
-.approaches figure:hover {
-    box-shadow: 0 0 5px rgba(200, 200, 200, 0.9);
+.approaches figure:hover,
+.approaches figure:focus-visible {
+    transform: translateY(-10px);
+    transition: all 250ms;
+    background-color: var(--bg-100);
+    box-shadow: 0px 25px 39px 0px rgba(200, 200, 200, 0.20);
 }
 
 /*GALLERY*/
@@ -257,15 +298,20 @@ header nav ul li {
 
 .photo-box button {
     border-radius: 20px;
-    border: hidden;
-    background-color: var(--primary-200);
+    border: none;
+    background-color: var(--primary-100);
+    padding: 12px 0px;
     font-family: 'Jost', sans-serif;
     cursor: pointer;
+    color: var(--bg-100);
+    transition: background-color 1000ms;
 }
 
 
-.photo-box button:hover {
-    border: 2px solid var(--accent-200);
+.photo-box button:hover,
+.photo-box button:focus-visible {
+    transition: background-color 250ms;
+    background-color: var(--accent-200);
 }
 
 /*NEWS*/
@@ -364,6 +410,11 @@ footer hr {
 /*RESPONSIVE RULES*/
 
 @media only screen and (max-width:425px) {
+    header nav {
+        justify-content: space-around;
+        width: 100%;
+    }
+
     .footer-box {
         flex-direction: column;
     }
@@ -396,6 +447,17 @@ footer hr {
     .slider__slide img {
         height: 200px;
     }
-    
+
+    .hero-text {
+        flex-direction: column;
+    }
+
+    .hero-text h1 {
+        font-size: 50px;
+    }
+
+    .hero-text aside {
+        margin-left: 20px;
+    }
 }
 
