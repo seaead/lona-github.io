@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <title>help</title>
+</head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html"><div class="logo"><img src="images/lona-logo.png" alt=""></div></a>
+                <ul>
+                    <li class="menu-btn" onclick="toggleSection()"><img src="images/menu.svg" alt=""></li>
+                    <li class="other-pages"><a href="about.html"><h4>О фонде</h4></a></li>
+                    <li class="other-pages"><a href="children.html"><h4>Дети</h4></a></li>
+                    <li class="other-pages"><a href="news.html"><h4>Новости</h4></a></li>
+                    <li class="other-pages"><a href="help.html"><h4>Получить помощь</h4></a></li>
+                </ul>
+                <a href="donation.html"><button class="donation-btn">Пожертвовать</button></a>
+            </nav>
+        </header>
+        <div id="menu">
+            <nav>
+                <ul>
+                    <li><a href="about.html"><h5>О фонде</h5></a></li>
+                    <li><a href="children.html"><h5>Дети</h5></a></li>
+                    <li><a href="news.html"><h5>Новости</h5></a></li>
+                    <li><a href="help.html"><h5>Получить помощь</h5></a></li>
+                </ul>
+            </nav>
+        </div>
+        <main>
+            <section>
+                <div class="requirements">
+                    <h1>Получить помощь</h1>
+                    <h3>Перечень необходимых документов для обращения в фонд</h3>
+                    <ul>
+                        <li><p>Заявление</p></li>
+                        <li><p>Расписка</p></li>
+                        <li><p>Свидетельства рождении ребёнка (копия)</p></li>
+                        <li><p>Фото ребёнка</p></li>
+                        <li><p>Рецепт врача</p></li>
+                        <li><p>Копия паспорта одного из родителей</p></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <hr>
+            <div class="footer-box">
+                <div class="logo"><img src="images/lona-logo.png" alt=""></div>
+                <nav>
+                    <ul>
+                        <li><a href="">Дети</a></li>
+                        <li><a href="">Помогите пожалуйста!</a></li>
+                        <li><a href="">Благадарности</a></li>
+                        <li><a href="">Немного о фонде</a></li>
+                        <li><a href="">Мне нужна помощь</a></li>
+                    </ul>
+                </nav>
+                <ul>
+                    <li><h3 style="margin-top: 0;">КОНТАКТНАЯ ИНФОРМАЦИЯ</h3></li>
+                    <li><b>Наш адрес:</b> г.Душанбе, ул.Зебуниссо 7</li>
+                    <li><b>Website:</b> www.lona.tj</li>
+                    <li><b>Email:</b> info@lona.tj</li>
+                </ul>
+            </div>
+            <hr>
+            <div class="social-medias">
+                <a href="https://www.facebook.com/Lonacharityfoundation"><img src="images/Facebook.svg" alt=""></a>
+                <a href="https://www.instagram.com/lona_charity_foundation/"><img src="images/Instagram.svg" alt=""></a>
+            </div>
+            <p>© 2009-2023 Charity Foundation "Lona"</p>
+            
+        </footer>
+        <script>
+            function toggleSection() {
+            const div = document.getElementById('menu');
+            div.style.display = div.style.display === 'none' ? 'flex' : 'none';
+        }
+        </script>
+    </body>
+</html>
