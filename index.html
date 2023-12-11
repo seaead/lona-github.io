@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <title>LONA</title>
 </head>
     <body>
@@ -15,9 +15,11 @@
                 <a href="index.html"><div class="logo"><img src="images/lona-logo.png" alt=""></div></a>
                 <ul>
                     <li class="menu-btn" onclick="toggleSection()"><img src="images/menu.svg" alt=""></li>
+                    <li class="other-pages"><a href="index.html"><h4>Главная</h4></a></li>
                     <li class="other-pages"><a href="about.html"><h4>О фонде</h4></a></li>
                     <li class="other-pages"><a href="children.html"><h4>Дети</h4></a></li>
                     <li class="other-pages"><a href="news.html"><h4>Новости</h4></a></li>
+                    <li class="other-pages"><a href="appreciations.html"><h4>Благодарности</h4></a></li>
                     <li class="other-pages"><a href="help.html"><h4>Получить помощь</h4></a></li>
                 </ul>
                 <a href="donation.html"><button class="donation-btn">Пожертвовать</button></a>
@@ -29,6 +31,7 @@
                     <li><a href="about.html"><h5>О фонде</h5></a></li>
                     <li><a href="children.html"><h5>Дети</h5></a></li>
                     <li><a href="news.html"><h5>Новости</h5></a></li>
+                    <li><a href="appreciations.html"><h5>Благадарности</h5></a></li>
                     <li><a href="help.html"><h5>Получить помощь</h5></a></li>
                 </ul>
             </nav>
@@ -83,21 +86,21 @@
             <section class="donation-approach">
                 <h1>Виды пожертвования</h1>
                 <div class="approaches">
-                    <a href="">
+                    <a href="donation.html">
                         <figure>
                             <img src="images/bank-note.svg" alt="">
                             <h3>Перечислить деньги</h3>
                             <p>Денежный платеж путем Master/Visa Card, WebMoney, Яндекс.Деньги, а также Банковский платеж по реквизитам</p>
                         </figure>
                     </a>
-                    <a href="">
+                    <a href="donation.html">
                         <figure>
                             <img src="images/phone.svg" alt="">
                             <h3>SMS-платеж</h3>
                             <p>Вы можете отправить SMS со своего мобильного телефона и поддержать детей своей помощью</p>
                         </figure>
                     </a>
-                    <a href="">
+                    <a href="donation.html">
                         <figure>
                             <img src="images/smiley-happy-plus.svg" alt="">
                             <h3>Другая помощь</h3>
@@ -106,7 +109,7 @@
                     </a>
                 </div>
             </section>
-            <section class="appreciation">
+            <section>
                 <h1>Благодарности</h1>
                 <div class="comments">
                     <p>
@@ -114,7 +117,7 @@
                     </p>
                     <div class="comment-author">
                         <h3>Шахло Рахмонова</h3>
-                        <a href="">
+                        <a href="letters/letter-5.html">
                             <div class="details">
                                 <h4>Подробнее</h4>
                                 <img src="images/Arrow - Right.svg" alt="">
@@ -131,7 +134,7 @@
                     </p>
                     <div class="comment-author">
                         <h3>Косимов Рамз и Косимова Шахло</h3>
-                        <a href="">
+                        <a href="letters/letter-4.html">
                             <div class="details">
                                 <h4>Подробнее</h4>
                                 <img src="images/Arrow - Right.svg" alt="">
@@ -140,7 +143,7 @@
                     </div>
                     <hr>
                 </div>
-                <a href="">
+                <a href="appreciations.html">
                     <div class="details">
                         <h4>Другие благодарности</h4>
                         <img src="images/Arrow - Right.svg" alt="">
@@ -231,11 +234,11 @@
                 <div class="logo"><img src="images/lona-logo.png" alt=""></div>
                 <nav>
                     <ul>
-                        <li><a href="">Дети</a></li>
-                        <li><a href="">Помогите пожалуйста!</a></li>
-                        <li><a href="">Благадарности</a></li>
-                        <li><a href="">Немного о фонде</a></li>
-                        <li><a href="">Мне нужна помощь</a></li>
+                        <li><a href="children.html">Дети</a></li>
+                        <li><a href="about.html">О фонде</a></li>
+                        <li><a href="appreciations.html">Благадарности</a></li>
+                        <li><a href="news.html">Новости</a></li>
+                        <li><a href="help.html">Получить помощь<a></li>
                     </ul>
                 </nav>
                 <ul>
@@ -282,7 +285,7 @@
             slides.style.transform = `translateX(-${slideIndex * 100}%)`;
             }
     
-            /*setInterval(nextSlide, 5000);*/
+            setInterval(nextSlide, 5000);
     
             prevBtn.addEventListener('click', prevSlide);
             nextBtn.addEventListener('click', nextSlide);

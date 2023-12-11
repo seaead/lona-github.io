@@ -16,7 +16,7 @@
 body {
     margin: 100px 0 0 0;
     padding: 0;
-    font-family: 'Jost', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     background-color: var(--bg-100);
     box-sizing: border-box;
 }
@@ -26,6 +26,7 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 30px;
 }
 
 a, p {
@@ -42,10 +43,6 @@ h6, h5, h4, h3, h2, h1 {
 img {
     max-width: 100%;
     height: auto;
-}
-
-section {
-    margin-top: 30px;
 }
 
 .logo {
@@ -65,7 +62,7 @@ section {
   }
 
 button {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-weight: 500;
     cursor: pointer;
 }
@@ -246,11 +243,25 @@ header nav ul li h4:focus-visible {
     top: 50%;
     transform: translateY(-50%);
     z-index: 2;
-
     border-radius: 50%;
     padding: 10px;
     border: none;
     cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 250ms;
+    transition-delay: 3s;
+}
+
+.slider__prev:hover,
+.slider__prev:focus .slider__prev {
+    transition: opacity 250ms;
+    opacity: 1;
+}
+
+.slider__next:hover,
+.slider__next:focus .slider__next {
+    transition: opacity 250ms;
+    opacity: 1;
 }
   
 .slider__prev {
@@ -308,6 +319,8 @@ header nav ul li h4:focus-visible {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
+    text-align: start;
 }
 
 .comments hr {
@@ -334,7 +347,6 @@ header nav ul li h4:focus-visible {
     border: none;
     background-color: var(--primary-100);
     padding: 12px 10px;
-    font-family: 'Jost', sans-serif;
     cursor: pointer;
     color: var(--bg-100);
     transition: background-color 1000ms;
@@ -436,10 +448,11 @@ footer hr {
 
 .social-medias img {
     border-radius: 50%;
+    transition: box-shadow 250ms;
 }
 
 .social-medias img:hover {
-    box-shadow: 0 0 1px var(--primary-300);
+    box-shadow: 0 0 1px var(--text-200);
 }
 
 /*ABOUT US PAGE*/
@@ -491,7 +504,20 @@ footer hr {
 .donation {
     display: flex;
     justify-content: space-around ;
+    align-items: flex-start;
+}
+
+.requisites {
+    margin-top: 20px;
     align-items: baseline;
+    justify-content: first baseline;
+}
+
+.qrcode {
+    max-width: 250px;
+    max-height: 250px;
+    min-width: 150px;
+    min-height: 150px;
 }
 
 /*NEWS PAGE*/
@@ -511,6 +537,38 @@ footer hr {
     list-style-type: decimal;
 }
 
+/*APPRECIATION PAGE*/
+
+.appreciation {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.certificates figure {
+    width: 250px;
+    height: 500px;
+}
+
+/*LETTER*/
+
+.letter-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.letter {
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 90%;
+}
+
+.letter ul {
+    list-style-type: decimal;
+    padding-left: 50px;
+
+}
 
 /*RESPONSIVE RULES*/
 
