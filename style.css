@@ -94,6 +94,7 @@ ul {
 header {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     position: fixed;
     width: 100%;
     background-color: var(--bg-100);
@@ -130,7 +131,7 @@ header nav ul li h4:focus-visible {
 
 #menu {
     display: none;
-    position:absolute;
+    position:sticky;
     width: 100%;
     height: 100%;
     background-color: var(--bg-200);
@@ -138,16 +139,11 @@ header nav ul li h4:focus-visible {
     z-index: 3;
 }
 
-#menu nav {
-    display: flex;
-    flex-direction: column;
-}
-
-#menu nav ul {
+#menu ul {
     padding: 20px;
 }
 
-#menu nav ul li h5 {
+#menu ul li h5 {
     font-size: larger;
 }
 
@@ -380,8 +376,8 @@ header nav ul li h4:focus-visible {
     width: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-
+    justify-content: baseline;
+    align-items: baseline;
 }
 
 .news-box figure {
@@ -395,6 +391,7 @@ header nav ul li h4:focus-visible {
 .news-box figure img {
     width: 220px;
     height: 220px;
+    aspect-ratio: 1 / 1 ;
     object-fit: cover;
 }
 
@@ -415,7 +412,7 @@ footer {
 
 .footer-box {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 100%;
     align-items: center;
 }
@@ -645,6 +642,19 @@ footer hr {
 /*RESPONSIVE RULES*/
 
 @media only screen and (max-width : 425px) {
+    .donation {
+        flex-direction: column-reverse;
+    }
+
+    .news-box figure img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .appreciation {
+        flex-direction: column;
+    }
+
     .new-page {
         justify-content: center;
         align-items: center;
@@ -661,7 +671,7 @@ footer hr {
         grid-auto-columns: 44%;
     }
 
-    h6, h5, h4, h3, h2, h1, a, p {
+    h6, h5, h4, h3, h2, h1, a, p, .ellipsis, .multiline-ellipsis {
         font-size: smaller;
     }
 
