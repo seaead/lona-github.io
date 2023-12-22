@@ -182,13 +182,13 @@ form button:focus-visible {
     align-self: flex-start;
     flex-direction: column;
     position: absolute;
-    left: 10%;
+    right: 10%;
     top: 30%;
 }
 
 .hero-text h1 {
-    margin-top: 0;
-    font-size: 74px;
+    margin: 0;
+    font-size: 60px;
     max-width: 400px;
 }
 
@@ -785,14 +785,22 @@ label:hover {
 
 @media only screen and (max-width : 1260px) {
     .hero-text h1 {
-        font-size: 60px;
+        font-size: 50px;
         margin: 0;
+    }
+    .hero-text {
+        right: 0%;
+        top:25%;
     }
 }
 
 @media only screen and (max-width : 1080px) {
     header nav ul li h4 {
         font-size: smaller;
+    }
+    .hero-text {
+        right: 0%;
+        top: 20%;
     }
 }
 
@@ -804,6 +812,14 @@ label:hover {
     .hero-text h1 {
         font-size: 45px;
         margin: 0;
+    }
+    
+    header nav ul {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
     }
 }
 
