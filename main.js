@@ -26,7 +26,7 @@ function updateSlidePosition() {
 slides.style.transform = `translateX(-${slideIndex * 100}%)`;
 }
 
-setInterval(nextSlide, 5000);
+setInterval(nextSlide, 8000);
 
 prevBtn.addEventListener('click', prevSlide);
 nextBtn.addEventListener('click', nextSlide);
